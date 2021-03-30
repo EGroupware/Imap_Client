@@ -1,5 +1,5 @@
 {
-    "name": "horde/imap-client",
+    "name": "egroupware/imap-client",
     "description": "IMAP client library",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Imap_Client",

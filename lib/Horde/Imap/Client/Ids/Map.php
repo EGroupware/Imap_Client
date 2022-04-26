@@ -205,7 +205,7 @@ class Horde_Imap_Client_Ids_Map implements Countable, IteratorAggregate, Seriali
 
     /**
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new ArrayIterator($this->_ids);
     }
@@ -214,7 +214,7 @@ class Horde_Imap_Client_Ids_Map implements Countable, IteratorAggregate, Seriali
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         /* Sort before storing; provides more compressible representation. */
         $this->sort();
@@ -227,7 +227,7 @@ class Horde_Imap_Client_Ids_Map implements Countable, IteratorAggregate, Seriali
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         $data = json_decode($data, true);
 

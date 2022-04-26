@@ -163,14 +163,14 @@ implements Serializable, SplSubject
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return json_encode($this->_charsets);
     }
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         $this->_charsets = json_decode($data, true);
     }

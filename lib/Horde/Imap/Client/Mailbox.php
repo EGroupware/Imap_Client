@@ -132,14 +132,14 @@ class Horde_Imap_Client_Mailbox implements Serializable
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return json_encode(array($this->_utf7imap, $this->_utf8));
     }
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         list($this->_utf7imap, $this->_utf8) = json_decode($data, true);
     }

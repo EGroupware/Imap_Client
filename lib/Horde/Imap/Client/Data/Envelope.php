@@ -203,7 +203,7 @@ class Horde_Imap_Client_Data_Envelope implements Serializable
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return serialize(array(
             'd' => $this->_data,
@@ -213,7 +213,7 @@ class Horde_Imap_Client_Data_Envelope implements Serializable
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         $data = @unserialize($data);
         if (empty($data['v']) || ($data['v'] != self::VERSION)) {

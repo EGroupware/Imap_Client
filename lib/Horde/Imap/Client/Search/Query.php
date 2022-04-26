@@ -864,7 +864,7 @@ class Horde_Imap_Client_Search_Query implements Serializable
      *
      * @return string  Serialized data.
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         $data = array(
             // Serialized data ID.
@@ -886,7 +886,7 @@ class Horde_Imap_Client_Search_Query implements Serializable
      *
      * @throws Exception
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         $data = @unserialize($data);
         if (!is_array($data) ||

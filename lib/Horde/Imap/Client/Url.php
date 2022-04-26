@@ -287,14 +287,14 @@ class Horde_Imap_Client_Url implements Serializable
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return strval($this);
     }
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         $this->_parse($data);
     }

@@ -361,7 +361,7 @@ implements Serializable, SplObserver
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return serialize(array(
             'i' => $this->_init,
@@ -372,7 +372,7 @@ implements Serializable, SplObserver
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         $data = @unserialize($data);
         if (!is_array($data) ||

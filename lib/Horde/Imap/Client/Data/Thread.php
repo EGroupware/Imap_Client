@@ -180,7 +180,7 @@ class Horde_Imap_Client_Data_Thread implements Countable, Serializable
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return json_encode(array(
             $this->_thread,
@@ -190,7 +190,7 @@ class Horde_Imap_Client_Data_Thread implements Countable, Serializable
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
         list($this->_thread, $this->_type) = json_decode($data, true);
     }

@@ -52,14 +52,14 @@ extends Horde_Imap_Client_Data_SearchCharset
 
     /**
      */
-    public function serialize()
+    public function serialize(): ?string
     {
         return '';
     }
 
     /**
      */
-    public function unserialize($data)
+    public function unserialize($data): void
     {
     }
 
